@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
-
 import DockMenu from '@/components/dock';
-import { Particles } from '@/components/magicui/particles';
+import { GridPattern } from '@/components/magicui/grid-pattern';
 import { ThemeProvider } from '@/components/theme/theme-provider';
+import { cn } from '@/lib/utils';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -29,20 +29,28 @@ export default function RootLayout({
   return (
     <html lang='en' data-theme='light'>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased relative min-h-screen flex flex-col`}
+        className={cn(
+          geistSans.variable,
+          geistMono.variable,
+          'antialiased relative min-h-screen flex flex-col'
+        )}
       >
         <ThemeProvider attribute='class' defaultTheme='light'>
+          {/* 
           <Particles
-            className='absolute inset-0 z-0'
-            quantity={100}
-            ease={80}
-            color={'var(--particle-color, #000000)'}
-            refresh
-          />
+          className='absolute inset-0 z-0'
+          quantity={100}
+          ease={80}
+          color={'#ffffff'}
+          refresh
+          /> 
+          */}
+
           <main className='flex-grow relative'>
             {children}
             <div className='absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-background to-transparent' />
           </main>
+
           <div className='fixed bottom-5 left-0 right-0 z-50 p-2'>
             <DockMenu />
           </div>
