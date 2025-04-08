@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import DockMenu from '@/components/dock';
-import { GridPattern } from '@/components/magicui/grid-pattern';
+import { ThemeParticles } from '@/components/particlesBackground';
 import { ThemeProvider } from '@/components/theme/theme-provider';
 import { cn } from '@/lib/utils';
 
@@ -36,20 +36,16 @@ export default function RootLayout({
         )}
       >
         <ThemeProvider attribute='class' defaultTheme='light'>
-          {/* 
-          <Particles
-          className='absolute inset-0 z-0'
-          quantity={100}
-          ease={80}
-          color={'#ffffff'}
-          refresh
-          /> 
-          */}
+          <ThemeParticles />
 
-          <main className='flex-grow relative'>
+          <main className='flex-grow relative z-10'>
             {children}
             <div className='absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-background to-transparent' />
           </main>
+
+          <footer className='z-10 text-sm text-muted-foreground py-6 px-10'>
+            © {new Date().getFullYear()} Yuri Gonçalves. All rights reserved.
+          </footer>
 
           <div className='fixed bottom-5 left-0 right-0 z-50 p-2'>
             <DockMenu />

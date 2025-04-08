@@ -8,52 +8,46 @@ import {
   TooltipTrigger,
 } from '@/components/ui/tooltip';
 import { cn } from '@/lib/utils';
-import {
-  ContactIcon,
-  FolderKanban,
-  GitBranchPlus,
-  HomeIcon,
-  Newspaper,
-} from 'lucide-react';
+import { ContactIcon, FolderKanban, HomeIcon, Newspaper } from 'lucide-react';
 import Link from 'next/link';
 import { Dock, DockIcon } from '../magicui/dock';
 import { ModeToggle } from '../theme/mode-toggle';
 
 const menuData = {
   navbar: [
-    { href: '#', icon: HomeIcon, label: 'Home' },
-    { href: '#', icon: FolderKanban, label: 'Projects' },
-    { href: '#', icon: ContactIcon, label: 'Contact' },
-    { href: '#', icon: Newspaper, label: 'Blog' },
+    { href: '/', icon: HomeIcon, label: 'Home' },
+    { href: '/projects', icon: FolderKanban, label: 'Projects' },
+    { href: '/contact', icon: ContactIcon, label: 'Contact' },
+    { href: '/blog', icon: Newspaper, label: 'Blog' },
   ],
-  contact: {
-    social: {
-      GitHub: {
-        name: 'GitHub',
-        url: '#',
-        icon: GitBranchPlus,
-        navbar: true,
-      },
-      LinkedIn: {
-        name: 'LinkedIn',
-        url: '#',
-        icon: GitBranchPlus,
-        navbar: true,
-      },
-      X: {
-        name: 'X',
-        url: '#',
-        icon: GitBranchPlus,
-        navbar: true,
-      },
-      email: {
-        name: 'Send Email',
-        url: '#',
-        icon: GitBranchPlus,
-        navbar: false,
-      },
-    },
-  },
+  // contact: {
+  //   social: {
+  //     GitHub: {
+  //       name: 'GitHub',
+  //       url: '#',
+  //       icon: GitHubLogoIcon,
+  //       navbar: true,
+  //     },
+  //     LinkedIn: {
+  //       name: 'LinkedIn',
+  //       url: '#',
+  //       icon: LinkedInLogoIcon,
+  //       navbar: true,
+  //     },
+  //     X: {
+  //       name: 'X',
+  //       url: '#',
+  //       icon: X,
+  //       navbar: true,
+  //     },
+  //     email: {
+  //       name: 'Send Email',
+  //       url: '#',
+  //       icon: GitBranchPlus,
+  //       navbar: false,
+  //     },
+  //   },
+  // },
 };
 
 export default function DockMenu() {
@@ -82,7 +76,7 @@ export default function DockMenu() {
           </DockIcon>
         ))}
         <Separator orientation='vertical' className='h-full' />
-        {Object.entries(menuData.contact.social)
+        {/* {Object.entries(menuData.contact.social)
           .filter(([_, social]) => social.navbar)
           .map(([name, social]) => (
             <DockIcon key={name}>
@@ -103,8 +97,8 @@ export default function DockMenu() {
                 </TooltipContent>
               </Tooltip>
             </DockIcon>
-          ))}
-        <Separator orientation='vertical' className='h-full py-2' />
+          ))} */}
+        {/* <Separator orientation='vertical' className='h-full py-2' /> */}
         <DockIcon>
           <Tooltip>
             <TooltipTrigger asChild>

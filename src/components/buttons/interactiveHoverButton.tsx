@@ -1,12 +1,14 @@
 import type { ReactNode } from 'react';
 import { InteractiveHoverButton } from '../magicui/interactive-hover-button';
 
-interface InteractiveHoverButtonProps {
+interface InteractiveHoverButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   text: string;
 }
 
 export function InteractiveHoverButtonWithText({
   text,
+  ...props
 }: InteractiveHoverButtonProps) {
-  return <InteractiveHoverButton>{text}</InteractiveHoverButton>;
+  return <InteractiveHoverButton {...props}>{text}</InteractiveHoverButton>;
 }

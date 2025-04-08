@@ -38,12 +38,12 @@ const SkillCard = ({ img, name }: { img: string; name: string }) => {
 export function SkillsViewer() {
   return (
     <div className='relative flex w-full flex-col items-center justify-center overflow-hidden py-4'>
-      <Marquee pauseOnHover className='[--duration:20s]'>
+      <Marquee pauseOnHover className='[--duration:30s]'>
         {firstRow.map((skill) => (
           <SkillCard key={skill.name} {...skill} />
         ))}
       </Marquee>
-      <Marquee reverse pauseOnHover className='[--duration:20s]'>
+      <Marquee reverse pauseOnHover className='[--duration:30s]'>
         {secondRow.map((skill) => (
           <SkillCard key={skill.name} {...skill} />
         ))}
