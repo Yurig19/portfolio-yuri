@@ -141,40 +141,48 @@ export default function Home() {
         </TextAnimate>
 
         <div className='flex gap-4 mt-4'>
-          <InteractiveHoverButtonWithText
-            text='Get in touch'
-            onClick={() => router.push('/contact')}
-          />
-          <Button
-            variant='outline'
-            size='icon'
-            onClick={() => window.open('https://github.com/Yurig19', '_blank')}
-          >
-            <GitHubLogoIcon />
-          </Button>
-          <Button
-            variant='outline'
-            size='icon'
-            onClick={() =>
-              window.open(
-                'https://www.linkedin.com/in/yuri-gonçalves-404a75249',
-                '_blank'
-              )
-            }
-          >
-            <LinkedInLogoIcon />
-          </Button>
+          <FadeInOnScroll>
+            <InteractiveHoverButtonWithText
+              text='Get in touch'
+              onClick={() => router.push('/contact')}
+            />
+          </FadeInOnScroll>
+          <FadeInOnScroll>
+            <Button
+              variant='outline'
+              size='icon'
+              onClick={() =>
+                window.open('https://github.com/Yurig19', '_blank')
+              }
+            >
+              <GitHubLogoIcon />
+            </Button>
+          </FadeInOnScroll>
+          <FadeInOnScroll>
+            <Button
+              variant='outline'
+              size='icon'
+              onClick={() =>
+                window.open(
+                  'https://www.linkedin.com/in/yuri-gonçalves-404a75249',
+                  '_blank'
+                )
+              }
+            >
+              <LinkedInLogoIcon />
+            </Button>
+          </FadeInOnScroll>
         </div>
       </header>
 
-      <section className='w-full max-w-4xl mb-16'>
-        <h2 className='text-2xl font-semibold border-b pb-2 border-border'>
-          Skills
-        </h2>
-        <FadeInOnScroll>
+      <FadeInOnScroll>
+        <section className='w-full max-w-4xl mb-16'>
+          <h2 className='text-2xl font-semibold border-b pb-2 border-border'>
+            Skills
+          </h2>
           <SkillsViewer />
-        </FadeInOnScroll>
-      </section>
+        </section>
+      </FadeInOnScroll>
       <FadeInOnScroll>
         <section className='w-full max-w-4xl mb-16'>
           <h2 className='text-2xl font-semibold border-b pb-2 border-border'>
@@ -184,25 +192,18 @@ export default function Home() {
           <div className='relative mt-8 ml-4 pl-6 border-l-2 border-border'>
             {[
               {
-                role: 'Full Stack Developer',
-                company: 'Tech Solutions Inc.',
-                period: 'Jan 2022 – Present',
+                role: 'Web Full Stack Developer',
+                company: 'Fairy Solutions',
+                period: 'Ago 2024 – Mar 2025',
                 description:
-                  'Leading the development of modern web applications using React, Next.js, and Node.js. Responsible for API integration (REST & GraphQL), automated testing, and cloud deployment.',
-              },
-              {
-                role: 'Frontend Developer',
-                company: 'Creative Agency XYZ',
-                period: 'Aug 2020 – Dec 2021',
-                description:
-                  'Built responsive and high-performance interfaces with strong emphasis on accessibility and user experience. Worked closely with designers, using Tailwind CSS and Framer Motion extensively.',
+                  'I worked in web development with a focus on back-end implementation using JavaScript (TypeScript), primarily with the NestJS framework, along with Prisma and, occasionally, TypeORM. In this role, I gained experience with various integrations, such as payment systems and artificial intelligence solutions. I also handled some front-end tasks and contributed to multiple projects. Additionally, I was responsible for writing and maintaining technical documentation.',
               },
               {
                 role: 'Web Development Intern',
-                company: 'DevLab Startup',
-                period: 'Jan 2020 – Jul 2020',
+                company: 'Fairy Solutions',
+                period: 'Feb 2024 – Ago 2024',
                 description:
-                  'Assisted in feature development, bug fixing, and testing. Gained experience working in an agile environment and following version control best practices using Git.',
+                  'I worked in web development with a focus on back-end implementation using JavaScript (TypeScript), primarily with the NestJS framework, along with Prisma and, occasionally, TypeORM. In this role, I gained experience with various integrations, such as payment systems and artificial intelligence solutions. I also handled some front-end tasks and contributed to multiple projects. Additionally, I was responsible for writing and maintaining technical documentation.',
               },
             ].map((exp, index) => (
               <motion.div
@@ -241,18 +242,11 @@ export default function Home() {
           <div className='flex flex-col gap-6 mt-4'>
             {[
               {
-                degree: 'Bacharelado em Ciência da Computação',
-                institution: 'Universidade Federal de Tecnologia',
-                period: '2016 – 2020',
+                degree: 'Bachelor s Degree in Systems Analysis and Development',
+                institution: 'Universidade Paulista (UNIP)',
+                period: '2022 – 2024',
                 description:
-                  'Durante o curso, adquiri sólidos conhecimentos em estruturas de dados, algoritmos, sistemas distribuídos, banco de dados e desenvolvimento web. Participei de projetos de extensão e iniciação científica voltados ao desenvolvimento de soluções web.',
-              },
-              {
-                degree: 'Curso Técnico em Informática',
-                institution: 'Instituto Técnico Estadual',
-                period: '2013 – 2015',
-                description:
-                  'Aprendizado prático em redes de computadores, lógica de programação, montagem e manutenção de computadores, além de desenvolvimento básico com HTML, CSS e Java.',
+                  'During the course, I acquired solid knowledge in data structures, algorithms, distributed systems, databases, and web development.',
               },
             ].map((edu, index) => (
               <motion.div
