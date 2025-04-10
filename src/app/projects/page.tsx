@@ -11,6 +11,7 @@ import {
   PaginationPrevious,
 } from '@/components/ui/pagination';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 type Project = {
   id: string;
@@ -23,6 +24,25 @@ type Project = {
 };
 
 const projects: Project[] = [
+  {
+    id: 'portfolio-v1',
+    title: 'Portfolio v1',
+    description:
+      'My first portfolio website, built with Next.js and Tailwind CSS.',
+    image: '/portfolio-v1.png',
+    tags: [
+      'React Js',
+      'Next.js',
+      'Tailwind CSS',
+      'TypeScript',
+      'Shadcn UI',
+      'Magic UI',
+      'Framer Motion',
+    ],
+    projectUrl: '#',
+    codeUrl: 'https://github.com/Yurig19/portfolio-yuri',
+  },
+
   // {
   //   id: 'notely',
   //   title: 'Notely',
@@ -56,6 +76,8 @@ const projects: Project[] = [
 ];
 
 export default function Projects() {
+  const router = useRouter();
+
   return (
     <div className='w-full max-w-6xl mx-auto px-6 py-16'>
       <h1 className='text-4xl font-bold text-center mb-16'>All Projects</h1>
@@ -93,8 +115,14 @@ export default function Projects() {
                   </div>
 
                   <div className='flex gap-4'>
-                    <InteractiveHoverButtonWithText text='View Project' />
-                    <InteractiveHoverButtonWithText text='View Code' />
+                    <InteractiveHoverButtonWithText
+                      text='View Project'
+                      onClick={() => router.push(project.projectUrl)}
+                    />
+                    <InteractiveHoverButtonWithText
+                      text='View Code'
+                      onClick={() => router.push(project.codeUrl)}
+                    />
                   </div>
                 </div>
               </div>

@@ -18,6 +18,7 @@ import {
 import { GitHubLogoIcon, LinkedInLogoIcon } from '@radix-ui/react-icons';
 import { motion } from 'framer-motion';
 import { useTheme } from 'next-themes';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
 type File = {
@@ -29,10 +30,22 @@ type Feature = {
   name: string;
   description: string;
   href: string;
+  codeUrl: string;
   cta: string;
   background: React.ReactNode;
   className: string;
 };
+
+type Blog = {
+  title: string;
+  description: string;
+  blogUrl: string;
+  background: React.ReactNode;
+  cta: string;
+  className: string;
+};
+
+const blogs: Blog[] = [];
 
 const files: File[] = [
   {
@@ -58,6 +71,24 @@ const files: File[] = [
 ];
 
 const features: Feature[] = [
+  {
+    name: 'Portfolio',
+    description:
+      'My personal portfolio website, showcasing my skills and projects.',
+    href: '/',
+    codeUrl: 'https://github.com/Yurig19/portfolio-yuri',
+    cta: 'View project',
+    background: (
+      <Image
+        src='/portfolio-v1.png'
+        alt='Portfolio v1'
+        width={500}
+        height={500}
+        className='h-full w-full object-cover rounded-lg'
+      />
+    ),
+    className: 'lg:row-start-1 lg:row-end-4 lg:col-start-1 lg:col-end-2',
+  },
   // {
   //   name: 'Notely',
   //   description:
@@ -301,8 +332,8 @@ export default function Home() {
                   <ProjectCardGrid
                     key={feature.name}
                     {...feature}
-                    projectHref=''
-                    codeHref=''
+                    projectHref={feature.href}
+                    codeHref={feature.codeUrl}
                   />
                 ))}
               </ProjectCard>
@@ -321,15 +352,10 @@ export default function Home() {
             Latest Blog Posts
           </h2>
           <div className='gap-6 mt-4'>
-            {features.length > 0 ? (
+            {blogs.length > 0 ? (
               <BlogsCardGrid className='flex gap-4'>
-                {features.map((feature) => (
-                  <BlogsCard
-                    key={feature.name}
-                    {...feature}
-                    projectHref=''
-                    codeHref=''
-                  />
+                {blogs.map((blog) => (
+                  <BlogsCard key={blog.title} {...blog} />
                 ))}
               </BlogsCardGrid>
             ) : (
