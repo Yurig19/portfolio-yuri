@@ -22,6 +22,17 @@ export interface DockProps extends VariantProps<typeof dockVariants> {
   children: React.ReactNode;
 }
 
+export interface DockIconProps
+  extends Omit<MotionProps & React.HTMLAttributes<HTMLDivElement>, 'children'> {
+  size?: number;
+  magnification?: number;
+  distance?: number;
+  mouseX?: MotionValue<number>;
+  className?: string;
+  children?: React.ReactNode;
+  props?: PropsWithChildren;
+}
+
 const DEFAULT_SIZE = 40;
 const DEFAULT_MAGNIFICATION = 60;
 const DEFAULT_DISTANCE = 140;
@@ -47,9 +58,14 @@ const Dock = React.forwardRef<HTMLDivElement, DockProps>(
 
     const renderChildren = () => {
       return React.Children.map(children, (child) => {
-        if (React.isValidElement(child) && child.type === DockIcon) {
+        if (
+          React.isValidElement<DockIconProps>(child) &&
+          child.type === DockIcon
+        ) {
           return React.cloneElement(child, {
-            ...child.props,
+            ...(child.props && typeof child.props === 'object'
+              ? child.props
+              : {}),
             mouseX: mouseX,
             size: iconSize,
             magnification: iconMagnification,
@@ -79,17 +95,6 @@ const Dock = React.forwardRef<HTMLDivElement, DockProps>(
 );
 
 Dock.displayName = 'Dock';
-
-export interface DockIconProps
-  extends Omit<MotionProps & React.HTMLAttributes<HTMLDivElement>, 'children'> {
-  size?: number;
-  magnification?: number;
-  distance?: number;
-  mouseX?: MotionValue<number>;
-  className?: string;
-  children?: React.ReactNode;
-  props?: PropsWithChildren;
-}
 
 const DockIcon = ({
   size = DEFAULT_SIZE,
