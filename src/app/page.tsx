@@ -168,7 +168,7 @@ export default function Home() {
 
   return (
     <div className='flex flex-col min-h-screen p-8 sm:p-20 font-[family-name:var(--font-geist-sans)] text-foreground'>
-      <header className='text-left w-full max-w-4xl mb-16'>
+      <header className='text-left w-full max-w-7xl mb-16'>
         <motion.h2
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -177,7 +177,12 @@ export default function Home() {
         >
           Yuri Gonçalves | Full Stack Developer
         </motion.h2>
-        <TextAnimate animation='blurInUp' by='character' once>
+        <TextAnimate
+          className='text-lg'
+          animation='blurInUp'
+          by='character'
+          once
+        >
           I'm a full stack developer passionate about building meaningful
           digital experiences. I enjoy turning ideas into well-crafted, scalable
           solutions and working across both front-end and back-end to bring
@@ -222,7 +227,7 @@ export default function Home() {
       </header>
 
       <FadeInOnScroll>
-        <section className='w-full max-w-4xl mb-16'>
+        <section className='w-full max-w-7xl mb-16'>
           <h2 className='text-2xl font-semibold border-b pb-2 border-border'>
             Skills
           </h2>
@@ -230,7 +235,7 @@ export default function Home() {
         </section>
       </FadeInOnScroll>
       <FadeInOnScroll>
-        <section className='w-full max-w-4xl mb-16'>
+        <section className='w-full max-w-7xl mb-16'>
           <h2 className='text-2xl font-semibold border-b pb-2 border-border'>
             Work Experience
           </h2>
@@ -281,7 +286,7 @@ export default function Home() {
         </section>
       </FadeInOnScroll>
       <FadeInOnScroll>
-        <section className='w-full max-w-4xl mb-16'>
+        <section className='w-full max-w-7xl mb-16'>
           <h2 className='text-2xl font-semibold border-b pb-2 border-border'>
             Education
           </h2>
@@ -321,7 +326,7 @@ export default function Home() {
         </section>
       </FadeInOnScroll>
       <FadeInOnScroll>
-        <section className='w-full max-w-4xl mb-16'>
+        <section className='w-full max-w-7xl mb-16'>
           <h2 className='text-2xl font-semibold border-b pb-2 border-border'>
             Latest Projects
           </h2>
@@ -347,7 +352,7 @@ export default function Home() {
         </section>
       </FadeInOnScroll>
       <FadeInOnScroll>
-        <section className='w-full max-w-4xl mb-16'>
+        <section className='w-full max-w-7xl mb-16'>
           <h2 className='text-2xl font-semibold border-b pb-2 border-border'>
             Latest Blog Posts
           </h2>

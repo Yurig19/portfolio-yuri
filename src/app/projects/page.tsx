@@ -42,54 +42,23 @@ const projects: Project[] = [
     projectUrl: '#',
     codeUrl: 'https://github.com/Yurig19/portfolio-yuri',
   },
-
-  // {
-  //   id: 'notely',
-  //   title: 'Notely',
-  //   description:
-  //     'Note-taking app with markdown support, real-time sync, and authentication.',
-  //   image: '/portfolio-v1.png',
-  //   tags: ['Next.js', 'Tailwind CSS', 'Supabase', 'Markdown'],
-  //   projectUrl: '#',
-  //   codeUrl: '#',
-  // },
-  // {
-  //   id: 'devfinder',
-  //   title: 'DevFinder',
-  //   description:
-  //     'Find GitHub profiles with an interactive UI and built-in dark mode.',
-  //   image: '/portfolio-v1.png',
-  //   tags: ['React', 'TypeScript', 'GitHub API'],
-  //   projectUrl: '#',
-  //   codeUrl: '#',
-  // },
-  // {
-  //   id: 'portfolio-v2',
-  //   title: 'Portfolio v2',
-  //   description:
-  //     'Modern portfolio with smooth animations, dark/light mode, and responsive layout.',
-  //   image: '/portfolio-v1.png',
-  //   tags: ['Next.js', 'Framer Motion', 'Tailwind CSS'],
-  //   projectUrl: '#',
-  //   codeUrl: '#',
-  // },
 ];
 
 export default function Projects() {
   const router = useRouter();
 
   return (
-    <div className='w-full max-w-6xl mx-auto px-6 py-16'>
-      <h1 className='text-4xl font-bold text-center mb-16'>All Projects</h1>
+    <div className='w-full max-w-6xl mx-auto px-6 py-20'>
+      <h1 className='text-5xl font-bold text-center mb-20'>All Projects</h1>
       <FadeInOnScroll>
         {projects.length > 0 ? (
-          <div className='flex flex-col gap-20'>
+          <div className='flex flex-col gap-28'>
             {projects.map((project) => (
               <div
                 key={project.id}
-                className='flex flex-col md:flex-row gap-8 items-center'
+                className='flex flex-col md:flex-row gap-10 items-center'
               >
-                <div className='w-full md:w-1/2 aspect-video relative rounded-xl overflow-hidden border border-border'>
+                <div className='w-full md:w-1/2 h-[320px] relative rounded-2xl overflow-hidden border border-border shadow-lg'>
                   <Image
                     src={project.image}
                     alt={project.title}
@@ -99,22 +68,26 @@ export default function Projects() {
                 </div>
 
                 <div className='w-full md:w-1/2'>
-                  <h2 className='text-2xl font-semibold mb-2'>
+                  <h2 className='text-3xl font-semibold mb-4'>
                     {project.title}
                   </h2>
-                  <p className='text-muted-foreground mb-4'>
+                  <p className='text-lg text-muted-foreground mb-6'>
                     {project.description}
                   </p>
 
-                  <div className='flex flex-wrap gap-2 mb-6'>
+                  <div className='flex flex-wrap gap-3 mb-6'>
                     {project.tags.map((tag) => (
-                      <Badge key={`${project.id}-${tag}`} variant='secondary'>
+                      <Badge
+                        key={`${project.id}-${tag}`}
+                        variant='secondary'
+                        className='text-sm px-3 py-1.5'
+                      >
                         {tag}
                       </Badge>
                     ))}
                   </div>
 
-                  <div className='flex gap-4'>
+                  <div className='flex gap-6'>
                     <InteractiveHoverButtonWithText
                       text='View Project'
                       onClick={() => router.push(project.projectUrl)}
@@ -136,14 +109,14 @@ export default function Projects() {
       </FadeInOnScroll>
 
       {projects.length > 0 && (
-        <div className='mt-20'>
+        <div className='mt-24 flex justify-center'>
           <Pagination>
-            <PaginationContent>
+            <PaginationContent className='gap-4 text-lg'>
               <PaginationItem>
-                <PaginationPrevious href='#' />
+                <PaginationPrevious href='#' className='px-4 py-2 text-base' />
               </PaginationItem>
               <PaginationItem>
-                <PaginationNext href='#' />
+                <PaginationNext href='#' className='px-4 py-2 text-base' />
               </PaginationItem>
             </PaginationContent>
           </Pagination>
