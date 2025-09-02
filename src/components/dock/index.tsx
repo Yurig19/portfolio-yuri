@@ -9,7 +9,7 @@ import {
 } from '@/components/ui/tooltip';
 import { cn } from '@/lib/utils';
 import { ContactIcon, FolderKanban, HomeIcon, Newspaper } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { LanguageSwitcher } from '../languageSwitcher';
 import { Dock, DockIcon } from '../magicui/dock';
@@ -17,6 +17,7 @@ import { ModeToggle } from '../theme/mode-toggle';
 
 export default function DockMenu() {
   const t = useTranslations('DockMenu');
+  const locale = useLocale();
   const menuData = {
     navbar: [
       { href: '/', icon: HomeIcon, label: t('home') },
@@ -24,35 +25,9 @@ export default function DockMenu() {
       { href: '/contact', icon: ContactIcon, label: t('contact') },
       { href: '/blog', icon: Newspaper, label: t('blog') },
     ],
-    // contact: {
-    //   social: {
-    //     GitHub: {
-    //       name: 'GitHub',
-    //       url: '#',
-    //       icon: GitHubLogoIcon,
-    //       navbar: true,
-    //     },
-    //     LinkedIn: {
-    //       name: 'LinkedIn',
-    //       url: '#',
-    //       icon: LinkedInLogoIcon,
-    //       navbar: true,
-    //     },
-    //     X: {
-    //       name: 'X',
-    //       url: '#',
-    //       icon: X,
-    //       navbar: true,
-    //     },
-    //     email: {
-    //       name: 'Send Email',
-    //       url: '#',
-    //       icon: GitBranchPlus,
-    //       navbar: false,
-    //     },
-    //   },
-    // },
   };
+
+  const localizedPath = (path: string) => `/${locale}${path}`;
 
   return (
     <div className='pointer-events-none fixed inset-x-0 bottom-5 z-30 mx-auto mb-4 flex origin-bottom h-full max-h-14'>
@@ -63,7 +38,7 @@ export default function DockMenu() {
             <Tooltip>
               <TooltipTrigger asChild>
                 <Link
-                  href={item.href}
+                  href={localizedPath(item.href)}
                   className={cn(
                     buttonVariants({ variant: 'ghost', size: 'icon' }),
                     'size-12'
@@ -79,29 +54,6 @@ export default function DockMenu() {
           </DockIcon>
         ))}
         <Separator orientation='vertical' className='h-full' />
-        {/* {Object.entries(menuData.contact.social)
-          .filter(([_, social]) => social.navbar)
-          .map(([name, social]) => (
-            <DockIcon key={name}>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Link
-                    href={social.url}
-                    className={cn(
-                      buttonVariants({ variant: 'ghost', size: 'icon' }),
-                      'size-12'
-                    )}
-                  >
-                    <social.icon className='size-4' />
-                  </Link>
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>{name}</p>
-                </TooltipContent>
-              </Tooltip>
-            </DockIcon>
-          ))} */}
-        {/* <Separator orientation='vertical' className='h-full py-2' /> */}
         <DockIcon>
           <Tooltip>
             <TooltipTrigger asChild>

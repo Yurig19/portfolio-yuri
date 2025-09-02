@@ -7,8 +7,8 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { Link } from '@/i18n/navigation';
 import { useLocale } from 'next-intl';
+import { usePathname, useRouter } from 'next/navigation';
 
 import BR from 'country-flag-icons/react/3x2/BR';
 import ES from 'country-flag-icons/react/3x2/ES';
@@ -22,28 +22,30 @@ const flags: Record<string, React.ComponentType<{ className?: string }>> = {
 
 export function LanguageSwitcher() {
   const locale = useLocale();
+  const pathname = usePathname();
+  const router = useRouter();
 
   const CurrentFlag = flags[locale] ?? BR;
+
+  const changeLocale = (newLocale: string) => {
+    router.push(`/${newLocale}${pathname.replace(/^\/(en|pt|es)/, '')}`);
+  };
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant='ghost' size='icon' className='size-12'>
-          <CurrentFlag className=' rounded-sm' />
+          <CurrentFlag className='rounded-sm' />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align='end'>
         {Object.entries(flags).map(([lng, Flag]) => (
-          <DropdownMenuItem key={lng} asChild>
-            <Link
-              href='/'
-              locale={lng}
-              className={`flex items-center justify-center ${
-                locale === lng ? 'font-bold' : ''
-              }`}
+          <DropdownMenuItem key={lng} onClick={() => changeLocale(lng)}>
+            <div
+              className={`flex items-center justify-center ${locale === lng ? 'font-bold' : ''}`}
             >
-              <Flag className=' rounded-sm' />
-            </Link>
+              <Flag className='rounded-sm' />
+            </div>
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>
