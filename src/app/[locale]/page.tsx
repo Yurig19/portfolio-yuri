@@ -17,9 +17,10 @@ import {
 } from '@/components/ui/card';
 import { GitHubLogoIcon, LinkedInLogoIcon } from '@radix-ui/react-icons';
 import { motion } from 'framer-motion';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { useTheme } from 'next-themes';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
 type Feature = {
@@ -45,6 +46,7 @@ const blogs: Blog[] = [];
 
 export default function Home() {
   const { theme } = useTheme();
+  const locale = useLocale();
 
   const t = useTranslations('HomePage');
 
@@ -92,10 +94,9 @@ export default function Home() {
 
         <div className='flex gap-4 mt-4'>
           <FadeInOnScroll>
-            <InteractiveHoverButtonWithText
-              text={t('getInTouch')}
-              onClick={() => router.push('/contact')}
-            />
+            <Link href={`/${locale}/contact`}>
+              <InteractiveHoverButtonWithText text={t('getInTouch')} />
+            </Link>
           </FadeInOnScroll>
           <FadeInOnScroll>
             <Button
