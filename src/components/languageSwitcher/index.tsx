@@ -7,8 +7,8 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import { Link } from '@/i18n/navigation';
 import { useLocale } from 'next-intl';
-import Link from 'next/link';
 
 import BR from 'country-flag-icons/react/3x2/BR';
 import ES from 'country-flag-icons/react/3x2/ES';
@@ -22,13 +22,14 @@ const flags: Record<string, React.ComponentType<{ className?: string }>> = {
 
 export function LanguageSwitcher() {
   const locale = useLocale();
-  const CurrentFlag = flags[locale] ?? US;
+
+  const CurrentFlag = flags[locale] ?? BR;
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant='ghost' size='icon' className='size-12'>
-          <CurrentFlag className='w-6 h-6 rounded-sm' />
+          <CurrentFlag className=' rounded-sm' />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align='end'>
@@ -41,7 +42,7 @@ export function LanguageSwitcher() {
                 locale === lng ? 'font-bold' : ''
               }`}
             >
-              <Flag className='w-6 h-6 rounded-sm' />
+              <Flag className=' rounded-sm' />
             </Link>
           </DropdownMenuItem>
         ))}

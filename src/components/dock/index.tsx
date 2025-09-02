@@ -9,49 +9,51 @@ import {
 } from '@/components/ui/tooltip';
 import { cn } from '@/lib/utils';
 import { ContactIcon, FolderKanban, HomeIcon, Newspaper } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { LanguageSwitcher } from '../languageSwitcher';
 import { Dock, DockIcon } from '../magicui/dock';
 import { ModeToggle } from '../theme/mode-toggle';
 
-const menuData = {
-  navbar: [
-    { href: '/', icon: HomeIcon, label: 'Home' },
-    { href: '/projects', icon: FolderKanban, label: 'Projects' },
-    { href: '/contact', icon: ContactIcon, label: 'Contact' },
-    { href: '/blog', icon: Newspaper, label: 'Blog' },
-  ],
-  // contact: {
-  //   social: {
-  //     GitHub: {
-  //       name: 'GitHub',
-  //       url: '#',
-  //       icon: GitHubLogoIcon,
-  //       navbar: true,
-  //     },
-  //     LinkedIn: {
-  //       name: 'LinkedIn',
-  //       url: '#',
-  //       icon: LinkedInLogoIcon,
-  //       navbar: true,
-  //     },
-  //     X: {
-  //       name: 'X',
-  //       url: '#',
-  //       icon: X,
-  //       navbar: true,
-  //     },
-  //     email: {
-  //       name: 'Send Email',
-  //       url: '#',
-  //       icon: GitBranchPlus,
-  //       navbar: false,
-  //     },
-  //   },
-  // },
-};
-
 export default function DockMenu() {
+  const t = useTranslations('DockMenu');
+  const menuData = {
+    navbar: [
+      { href: '/', icon: HomeIcon, label: t('home') },
+      { href: '/projects', icon: FolderKanban, label: t('projects') },
+      { href: '/contact', icon: ContactIcon, label: t('contact') },
+      { href: '/blog', icon: Newspaper, label: t('blog') },
+    ],
+    // contact: {
+    //   social: {
+    //     GitHub: {
+    //       name: 'GitHub',
+    //       url: '#',
+    //       icon: GitHubLogoIcon,
+    //       navbar: true,
+    //     },
+    //     LinkedIn: {
+    //       name: 'LinkedIn',
+    //       url: '#',
+    //       icon: LinkedInLogoIcon,
+    //       navbar: true,
+    //     },
+    //     X: {
+    //       name: 'X',
+    //       url: '#',
+    //       icon: X,
+    //       navbar: true,
+    //     },
+    //     email: {
+    //       name: 'Send Email',
+    //       url: '#',
+    //       icon: GitBranchPlus,
+    //       navbar: false,
+    //     },
+    //   },
+    // },
+  };
+
   return (
     <div className='pointer-events-none fixed inset-x-0 bottom-5 z-30 mx-auto mb-4 flex origin-bottom h-full max-h-14'>
       <div className='fixed bottom-0 inset-x-0 h-16 w-full bg-background to-transparent backdrop-blur-lg [-webkit-mask-image:linear-gradient(to_top,black,transparent)] dark:bg-background' />
@@ -106,7 +108,7 @@ export default function DockMenu() {
               <ModeToggle />
             </TooltipTrigger>
             <TooltipContent>
-              <p>Theme</p>
+              <p>{t('theme')}</p>
             </TooltipContent>
           </Tooltip>
         </DockIcon>
@@ -116,7 +118,7 @@ export default function DockMenu() {
               <LanguageSwitcher />
             </TooltipTrigger>
             <TooltipContent>
-              <p>Language</p>
+              <p>{t('language')}</p>
             </TooltipContent>
           </Tooltip>
         </DockIcon>

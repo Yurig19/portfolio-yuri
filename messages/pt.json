@@ -100,5 +100,13 @@
     "sendButton": "Enviar Mensagem",
     "success": "Mensagem enviada com sucesso!",
     "error": "Falha ao enviar mensagem. Por favor, tente novamente mais tarde."
+  },
+  "DockMenu": {
+    "home": "Início",
+    "projects": "Projetos",
+    "contact": "Contato",
+    "blog": "Blog",
+    "theme": "Tema",
+    "language": "Idioma"
   }
 }
