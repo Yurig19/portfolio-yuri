@@ -1,0 +1,104 @@
+{
+  "HomePage": {
+    "title": "Yuri Gonçalves | Full Stack Developer",
+    "about": "I'm a full stack developer passionate about building meaningful digital experiences. I enjoy turning ideas into well-crafted, scalable solutions and working across both front-end and back-end to bring projects to life. Driven by curiosity and continuous learning, I thrive in collaborative environments where I can contribute, grow, and help create high-quality software that makes a difference.",
+    "getInTouch": "Get in touch",
+    "skills": "Skills",
+    "workExperience": "Work Experience",
+    "education": "Education",
+    "latestProjects": "Latest Projects",
+    "noProjects": "No recent projects available at the moment. Please check back later!",
+    "latestBlogPosts": "Latest Blog Posts",
+    "noBlogs": "No blog posts have been published yet. Stay tuned!",
+    "features": [
+      {
+        "name": "Portfolio",
+        "description": "My personal portfolio website, showcasing my skills and projects.",
+        "cta": "View project"
+      }
+    ],
+    "work": [
+      {
+        "role": "Web Full Stack Developer",
+        "company": "Fairy Solutions",
+        "period": "Aug 2024 – Mar 2025",
+        "description": "I worked as a full stack developer, actively contributing to both front-end and back-end development. On the back-end, I focused on JavaScript (TypeScript) with the NestJS framework, using tools like Prisma and occasionally TypeORM. On the front-end, I developed features using React, working with both Vite and the Next.js framework. A significant part of my role involved integrating front-end applications with back-end services, giving me solid experience in building seamless, end-to-end web solutions. Toward the end of my time at the company, I also gained experience in infrastructure-related tasks, such as deploying features, analyzing infrastructure, and supporting the release process. I contributed to multiple projects, handled technical documentation, and worked on third-party integrations, including payment systems and AI-powered services."
+      },
+      {
+        "role": "Web Development Intern",
+        "company": "Fairy Solutions",
+        "period": "Feb 2024 – Aug 2024",
+        "description": "I worked in web development with a focus on back-end implementation using JavaScript (TypeScript), primarily with the NestJS framework, along with Prisma and, occasionally, TypeORM. In this role, I gained experience with various integrations, such as payment systems and artificial intelligence solutions. I also handled some front-end tasks and contributed to multiple projects. Additionally, I was responsible for writing and maintaining technical documentation."
+      }
+    ],
+    "educationData": [
+      {
+        "degree": "Bachelor's Degree in Systems Analysis and Development",
+        "institution": "Universidade Paulista (UNIP)",
+        "period": "2022 – 2024",
+        "description": "During the course, I acquired solid knowledge in data structures, algorithms, distributed systems, databases, and web development."
+      }
+    ]
+  },
+  "ProjectsPage": {
+    "allProjects": "All Projects",
+    "viewProject": "View Project",
+    "viewFrontendCode": "View Frontend Code",
+    "viewBackendCode": "View Backend Code",
+    "viewCode": "View Code",
+    "noProjects": "No projects available at the moment. Check back soon!",
+    "project": {
+      "portfolio-v1": {
+        "title": "Portfolio v1",
+        "description": "My first portfolio website, built with Next.js and Tailwind CSS.",
+        "tags": {
+          "ReactJs": "React Js",
+          "Nextjs": "Next.js",
+          "TailwindCSS": "Tailwind CSS",
+          "TypeScript": "TypeScript",
+          "ShadcnUI": "Shadcn UI",
+          "MagicUI": "Magic UI",
+          "FramerMotion": "Framer Motion"
+        }
+      },
+      "epi": {
+        "title": "EPI System",
+        "description": "Fullstack project with separate frontend and backend repositories.",
+        "tags": {
+          "Fullstack": "Fullstack",
+          "NestJS": "NestJS",
+          "ReactJs": "React Js",
+          "Node": "Node",
+          "Vite": "Vite",
+          "TypeScript": "TypeScript",
+          "PostgreSQL": "PostgreSQL",
+          "Prisma": "Prisma"
+        }
+      }
+    }
+  },
+  "BlogPage": {
+    "title": "Blog",
+    "latestBlogPosts": "Latest Blog Posts",
+    "noBlogs": "No blog posts have been published yet. Stay tuned!",
+    "readMore": "Read more"
+  },
+  "ContactPage": {
+    "title": "Contact Me",
+    "letsConnect": "Let's Connect",
+    "email": "Email",
+    "phone": "Phone",
+    "findMeOn": "Find me on",
+    "sendMessage": "Send a Message",
+    "name": "Name",
+    "yourName": "Your name",
+    "emailPlaceholder": "you@example.com",
+    "subject": "Subject",
+    "subjectPlaceholder": "What is this about?",
+    "message": "Message",
+    "messagePlaceholder": "Write your message...",
+    "sendButton": "Send Message",
+    "success": "Message sent successfully!",
+    "error": "Failed to send message. Please try again later."
+  }
+}

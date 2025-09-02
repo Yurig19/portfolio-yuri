@@ -10,6 +10,7 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from '@/components/ui/pagination';
+import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 
 type BlogPost = {
@@ -31,6 +32,7 @@ const blogs: BlogPost[] = [];
 const ITEMS_PER_PAGE = 6;
 
 export default function Blog() {
+  const t = useTranslations('BlogPage');
   const [page, setPage] = useState(1);
 
   const totalPages = Math.ceil(blogs.length / ITEMS_PER_PAGE);
@@ -39,7 +41,7 @@ export default function Blog() {
 
   return (
     <section className='min-h-screen px-6 py-16 sm:px-10 md:px-20 text-foreground'>
-      <h1 className='text-4xl font-bold mb-12 text-center'>My Blog</h1>
+      <h1 className='text-4xl font-bold mb-12 text-center'>{t('title')}</h1>
 
       <FadeInOnScroll>
         {blogs.length > 0 ? (
@@ -60,7 +62,7 @@ export default function Blog() {
                 <CardContent>
                   <p className='text-muted-foreground'>{post.excerpt}</p>
                   <Button variant='secondary' className='mt-4' size='sm'>
-                    Read more
+                    {t('readMore')}
                   </Button>
                 </CardContent>
               </Card>
@@ -68,7 +70,7 @@ export default function Blog() {
           </div>
         ) : (
           <p className='text-muted-foreground text-center text-lg'>
-            No blog posts available at the moment. Stay tuned!
+            {t('noBlogs')}
           </p>
         )}
       </FadeInOnScroll>

@@ -1,0 +1,104 @@
+{
+  "HomePage": {
+    "title": "Yuri Gonçalves | Desenvolvedor Full Stack",
+    "about": "Desenvolvedor Full Stack apaixonado por criar aplicações web modernas e funcionais.",
+    "getInTouch": "Entrar em contato",
+    "skills": "Habilidades",
+    "workExperience": "Experiência Profissional",
+    "education": "Educação",
+    "latestProjects": "Últimos Projetos",
+    "noProjects": "Nenhum projeto recente disponível no momento. Por favor, volte mais tarde!",
+    "latestBlogPosts": "Últimos Posts do Blog",
+    "noBlogs": "Nenhum post de blog disponível no momento. Por favor, volte mais tarde.",
+    "work": [
+      {
+        "role": "Desenvolvedor Web Full Stack",
+        "company": "Fairy Solutions",
+        "period": "Ago 2024 – Mar 2025",
+        "description": "Atuei como desenvolvedor full stack, contribuindo ativamente para o desenvolvimento front-end e back-end. No back-end, trabalhei com JavaScript (TypeScript) usando o framework NestJS, com ferramentas como Prisma e, ocasionalmente, TypeORM. No front-end, desenvolvi funcionalidades com React, utilizando tanto Vite quanto Next.js. Uma parte significativa do meu papel envolveu a integração de aplicações front-end com serviços back-end, proporcionando experiência sólida em soluções web ponta a ponta. No final do período, também atuei em tarefas de infraestrutura, como deploy, análise e suporte ao processo de releases. Contribuí em múltiplos projetos, documentação técnica e integrações de terceiros, incluindo sistemas de pagamento e serviços com IA."
+      },
+      {
+        "role": "Estagiário de Desenvolvimento Web",
+        "company": "Fairy Solutions",
+        "period": "Fev 2024 – Ago 2024",
+        "description": "Atuei no desenvolvimento web com foco em back-end usando JavaScript (TypeScript), principalmente com NestJS, Prisma e, ocasionalmente, TypeORM. Ganhei experiência com integrações diversas, como sistemas de pagamento e soluções de IA. Também realizei tarefas de front-end e contribuí em múltiplos projetos, além de ser responsável por documentação técnica."
+      }
+    ],
+    "educationData": [
+      {
+        "degree": "Tecnólogo em Análise e Desenvolvimento de Sistemas",
+        "institution": "Universidade Paulista (UNIP)",
+        "period": "2022 – 2024",
+        "description": "Durante o curso, adquiri sólidos conhecimentos em estruturas de dados, algoritmos, sistemas distribuídos, bancos de dados e desenvolvimento web."
+      }
+    ],
+    "features": [
+      {
+        "name": "Portfolio",
+        "description": "Meu site de portfólio pessoal, mostrando minhas habilidades e projetos.",
+        "cta": "Ver projeto"
+      }
+    ]
+  },
+  "ProjectsPage": {
+    "allProjects": "Todos os Projetos",
+    "viewProject": "Ver Projeto",
+    "viewFrontendCode": "Ver Código Frontend",
+    "viewBackendCode": "Ver Código Backend",
+    "viewCode": "Ver Código",
+    "noProjects": "Nenhum projeto disponível no momento. Volte em breve!",
+    "project": {
+      "portfolio-v1": {
+        "title": "Portfolio v1",
+        "description": "Meu primeiro portfólio, feito com Next.js e Tailwind CSS.",
+        "tags": {
+          "ReactJs": "React Js",
+          "Nextjs": "Next.js",
+          "TailwindCSS": "Tailwind CSS",
+          "TypeScript": "TypeScript",
+          "ShadcnUI": "Shadcn UI",
+          "MagicUI": "Magic UI",
+          "FramerMotion": "Framer Motion"
+        }
+      },
+      "epi": {
+        "title": "Sistema EPI",
+        "description": "Projeto fullstack com repositórios separados para frontend e backend.",
+        "tags": {
+          "Fullstack": "Fullstack",
+          "NestJS": "NestJS",
+          "ReactJs": "React Js",
+          "Node": "Node",
+          "Vite": "Vite",
+          "TypeScript": "TypeScript",
+          "PostgreSQL": "PostgreSQL",
+          "Prisma": "Prisma"
+        }
+      }
+    }
+  },
+  "BlogPage": {
+    "title": "Blog",
+    "latestBlogPosts": "Últimos Posts do Blog",
+    "noBlogs": "Nenhum post de blog disponível no momento. Por favor, volte mais tarde.",
+    "readMore": "Leia mais"
+  },
+  "ContactPage": {
+    "title": "Contato",
+    "letsConnect": "Vamos nos conectar",
+    "email": "Email",
+    "phone": "Telefone",
+    "findMeOn": "Me encontre em",
+    "sendMessage": "Enviar uma Mensagem",
+    "name": "Nome",
+    "yourName": "Seu nome",
+    "emailPlaceholder": "voce@exemplo.com",
+    "subject": "Assunto",
+    "subjectPlaceholder": "Sobre o que é?",
+    "message": "Mensagem",
+    "messagePlaceholder": "Escreva sua mensagem...",
+    "sendButton": "Enviar Mensagem",
+    "success": "Mensagem enviada com sucesso!",
+    "error": "Falha ao enviar mensagem. Por favor, tente novamente mais tarde."
+  }
+}

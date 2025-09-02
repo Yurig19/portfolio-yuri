@@ -10,6 +10,7 @@ import {
 import { cn } from '@/lib/utils';
 import { ContactIcon, FolderKanban, HomeIcon, Newspaper } from 'lucide-react';
 import Link from 'next/link';
+import { LanguageSwitcher } from '../languageSwitcher';
 import { Dock, DockIcon } from '../magicui/dock';
 import { ModeToggle } from '../theme/mode-toggle';
 
@@ -106,6 +107,16 @@ export default function DockMenu() {
             </TooltipTrigger>
             <TooltipContent>
               <p>Theme</p>
+            </TooltipContent>
+          </Tooltip>
+        </DockIcon>
+        <DockIcon>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <LanguageSwitcher />
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Language</p>
             </TooltipContent>
           </Tooltip>
         </DockIcon>

@@ -1,0 +1,104 @@
+{
+  "HomePage": {
+    "title": "Yuri Gonçalves | Desarrollador Full Stack",
+    "about": "Desarrollador Full Stack apasionado por crear aplicaciones web modernas y funcionales.",
+    "getInTouch": "Contactar",
+    "skills": "Habilidades",
+    "workExperience": "Experiencia Profesional",
+    "education": "Educación",
+    "latestProjects": "Últimos Proyectos",
+    "noProjects": "No hay proyectos recientes disponibles en este momento. ¡Por favor, vuelve más tarde!",
+    "latestBlogPosts": "Últimas Publicaciones del Blog",
+    "noBlogs": "No hay publicaciones de blog disponibles en este momento. ¡Por favor, vuelve más tarde!",
+    "work": [
+      {
+        "role": "Desarrollador Web Full Stack",
+        "company": "Fairy Solutions",
+        "period": "Ago 2024 – Mar 2025",
+        "description": "Trabajé como desarrollador full stack, contribuyendo activamente tanto en el desarrollo front-end como back-end. En el back-end, trabajé con JavaScript (TypeScript) usando el framework NestJS, con herramientas como Prisma y, ocasionalmente, TypeORM. En el front-end, desarrollé funcionalidades con React, utilizando tanto Vite como Next.js. Una parte significativa de mi rol fue la integración de aplicaciones front-end con servicios back-end, lo que me dio experiencia sólida en soluciones web de extremo a extremo. Al final del período, también trabajé en tareas de infraestructura, como despliegue, análisis y soporte al proceso de releases. Contribuí en múltiples proyectos, documentación técnica e integraciones de terceros, incluyendo sistemas de pago y servicios con IA."
+      },
+      {
+        "role": "Practicante de Desarrollo Web",
+        "company": "Fairy Solutions",
+        "period": "Feb 2024 – Ago 2024",
+        "description": "Trabajé en desarrollo web con enfoque en back-end usando JavaScript (TypeScript), principalmente con NestJS, Prisma y, ocasionalmente, TypeORM. Obtuve experiencia con diversas integraciones, como sistemas de pago y soluciones de IA. También realicé tareas de front-end y contribuí en múltiples proyectos, además de ser responsable de documentación técnica."
+      }
+    ],
+    "educationData": [
+      {
+        "degree": "Tecnólogo en Análisis y Desarrollo de Sistemas",
+        "institution": "Universidade Paulista (UNIP)",
+        "period": "2022 – 2024",
+        "description": "Durante el curso, adquirí sólidos conocimientos en estructuras de datos, algoritmos, sistemas distribuidos, bases de datos y desarrollo web."
+      }
+    ],
+    "features": [
+      {
+        "name": "Portafolio",
+        "description": "Mi sitio web de portafolio personal, mostrando mis habilidades y proyectos.",
+        "cta": "Ver proyecto"
+      }
+    ]
+  },
+  "ProjectsPage": {
+    "allProjects": "Todos los Proyectos",
+    "viewProject": "Ver Proyecto",
+    "viewFrontendCode": "Ver Código Frontend",
+    "viewBackendCode": "Ver Código Backend",
+    "viewCode": "Ver Código",
+    "noProjects": "No hay proyectos disponibles en este momento. ¡Vuelve pronto!",
+    "project": {
+      "portfolio-v1": {
+        "title": "Portfolio v1",
+        "description": "Mi primer portafolio, hecho con Next.js y Tailwind CSS.",
+        "tags": {
+          "ReactJs": "React Js",
+          "Nextjs": "Next.js",
+          "TailwindCSS": "Tailwind CSS",
+          "TypeScript": "TypeScript",
+          "ShadcnUI": "Shadcn UI",
+          "MagicUI": "Magic UI",
+          "FramerMotion": "Framer Motion"
+        }
+      },
+      "epi": {
+        "title": "Sistema EPI",
+        "description": "Proyecto fullstack con repositorios separados para frontend y backend.",
+        "tags": {
+          "Fullstack": "Fullstack",
+          "NestJS": "NestJS",
+          "ReactJs": "React Js",
+          "Node": "Node",
+          "Vite": "Vite",
+          "TypeScript": "TypeScript",
+          "PostgreSQL": "PostgreSQL",
+          "Prisma": "Prisma"
+        }
+      }
+    }
+  },
+  "BlogPage": {
+    "title": "Blog",
+    "latestBlogPosts": "Últimas Publicaciones del Blog",
+    "noBlogs": "No hay publicaciones de blog disponibles en este momento. ¡Por favor, vuelve más tarde!",
+    "readMore": "Leer más"
+  },
+  "ContactPage": {
+    "title": "Contacto",
+    "letsConnect": "Conectémonos",
+    "email": "Correo electrónico",
+    "phone": "Teléfono",
+    "findMeOn": "Encuéntrame en",
+    "sendMessage": "Enviar un Mensaje",
+    "name": "Nombre",
+    "yourName": "Tu nombre",
+    "emailPlaceholder": "tu@ejemplo.com",
+    "subject": "Asunto",
+    "subjectPlaceholder": "¿De qué se trata?",
+    "message": "Mensaje",
+    "messagePlaceholder": "Escribe tu mensaje...",
+    "sendButton": "Enviar Mensaje",
+    "success": "¡Mensaje enviado con éxito!",
+    "error": "No se pudo enviar el mensaje. Por favor, inténtalo de nuevo más tarde."
+  }
+}
