@@ -21,7 +21,6 @@ import { useLocale, useTranslations } from 'next-intl';
 import { useTheme } from 'next-themes';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 
 type Feature = {
   name: string;
@@ -69,8 +68,6 @@ export default function Home() {
       className: 'lg:row-start-1 lg:row-end-4 lg:col-start-1 lg:col-end-2',
     },
   ];
-
-  const router = useRouter();
 
   return (
     <div className='flex flex-col min-h-screen p-8 sm:p-20 font-[family-name:var(--font-geist-sans)] text-foreground'>
