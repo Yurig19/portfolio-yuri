@@ -108,5 +108,8 @@
     "blog": "Blog",
     "theme": "Theme",
     "language": "Language"
+  },
+  "LayoutPage": {
+    "copyright": "© {year} Yuri Gonçalves. All rights reserved."
   }
 }
